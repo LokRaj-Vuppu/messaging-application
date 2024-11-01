@@ -1,0 +1,15 @@
+<div class="text-right">
+    <a href="#delete_modal" class="hover:text-red-700 text-right">Leave chat</a>
+</div>
+<div class="modal" role="dialog" id="delete_modal">
+<div class="modal-box">
+    <h3 class="font-bold text-lg">Confirm to leave chat !!</h3>
+    <div class="modal-action">
+    <form action="{% url 'chatroom-leave' chat_group.group_name %}" method="POST">
+        {% csrf_token %}
+        <button class="btn btn-outline btn-error">Leave</button>
+    </form>
+    <a href="#" class="btn btn-outline">Cancel</a>
+    </div>
+</div>
+</div>

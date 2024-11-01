@@ -1,0 +1,5 @@
+{% for user in available_users %}
+    {% if user.displayname %}
+        <h1>{{ user.displayname }}</h1>
+    {% endif %}
+{% endfor %}
